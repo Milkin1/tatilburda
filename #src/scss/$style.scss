@@ -1,0 +1,195 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+
+
+//<Иконочные шрифты>==========================================================================================
+
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Poppins";
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1184;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	font-size: 15px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+		padding: 0 20px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+		padding: 0 20px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+body.lock{
+	overflow: hidden;
+}
+
+.main__burger {
+	@include btn-reset;
+	display: block;
+	width: 23px;
+	height: 19px;
+	position: relative;
+	z-index: 3;
+}
+.burger-name{
+	position: absolute;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	color: #3f536c;
+	font-weight: 700;
+	font-size: 10px;
+	top: 5px;
+	left: 27px;
+
+}
+.main__burger span{
+	position: absolute;
+	background-color: #3f536c;
+	left: 0;
+	width: 16px;
+	height: 3px;
+	top: 8px;
+	transition: all 0.3s ease 0s;
+	border-radius: 17%;
+}
+.main__burger:before,
+.main__burger:after{
+	content: '';
+	background-color: #3f536c;
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	left: 0;
+	transition: all 0.3s ease 0s;
+	border-radius: 17%;
+}
+.main__burger:before{
+	top: 0;
+}
+.main__burger:after{
+	bottom: 0;
+}
+
+.main__burger.active span{
+	transform: scale(0);
+}
+
+.main__burger.active:before{
+	transform:rotate(45deg);
+	top: 8px;
+}
+.main__burger.active:after{
+	transform:rotate(-45deg);
+	bottom: 8px;
+}
+
+.main-navigation {
+	z-index: 2;
+	position: fixed;
+	max-width: 100%;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	transition: all 0.3s ease 0s;
+	background-color: #000;
+	opacity: 0.9;
+	padding: 70px 10px 20px 10px;
+}
+
+.main-navigation.active{
+	top: 0;
+}
+
+.main-navigation__list {
+	display: block;
+	text-align: center;
+	margin: 100px 0px 0px 0px;
+}
+.menu-item{
+	padding: 0 0 40px 0;
+	text-align: center;
+}
+.main-navigation__list a{
+	font-weight: 800;
+	font-size: 24px;
+	color: #fff;
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sm-logo {
+	padding: 25px 0px 25px 0px;
+	z-index: 2;
+	@media (min-width: 1024px) {
+		display: none;
+	}
+}
+.bg-logo {
+	display: none;
+	@media (min-width: 1024px) {
+		display: block;
+	}
+}
+.main {
+		// .main__burger
+		&__burger {}
+}
+.main-navigation {
+		// .main-navigation__list
+		&__list {}
+}
+.user {
+	@include btn-reset;
+}
+
+

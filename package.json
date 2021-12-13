@@ -1,0 +1,36 @@
+{
+  "name": "tatilburda.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "fs": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-file-include": "*",
+    "gulp-fonter": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-svg-sprite": "*",
+    "gulp-ttf2woff": "*",
+    "gulp-ttf2woff2": "*",
+    "gulp-uglify-es": "*",
+    "jquery": "*",
+    "sass": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "webp-converter": "2.2.3"
+  }
+}
