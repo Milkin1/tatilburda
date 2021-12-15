@@ -27,14 +27,35 @@
             <h2 class="burger_menu__title">Giriş yaptığınızda daha düşük fiyatlar<br> görürsünüz!</h2>
             <button class="burger_menu__btn" type="button">Üye Olun / Giriş Yapın</button>
             <ul class="main-navigation__list">
-                <li class="menu-item hotel"><a href="#"><img src="img/icons/otel.png" alt="otel">Oteller</a></li>
-                <li class="menu-item flight"><a href="#"><img src="img/icons/ucak.png" alt="ucak">Uçuşlar</a></li>
-                <li class="menu-item tour"><a href="#"><img src="img/icons/tur.png" alt="tur">Turlar</a></li>
-                <li class="menu-item discount"><a href="#"><img src="img/icons/kampaniya.png" alt="kampanyalar">Kampanyalar</a></li>
+                <li class="menu-item hotel">
+                    <a class="hotel__dropdown" href="#"><img src="img/icons/otel.png" alt="otel">Oteller</a>
+                    <ul class="hotel__contact">
+                        <li class="first"><img src="img/mobile/yurtici.png" alt="Yurt İçi Otelleri"><a href="">Yurt İçi Otelleri</a></li>
+                        <li><img src="img/mobile/termal.png" alt="Termal Oteller"><a href="">Termal Oteller</a></li>
+                        <li><img src="img/mobile/kibris.png" alt="Kıbrıs Otelleri"><a href="">Kıbrıs Otelleri</a></li>
+                        <li><img src="img/mobile/sehir.png" alt="Şehir Otelleri"><a href="">Şehir Otelleri</a></li>
+                        <li><img src="img/mobile/kayak.png" alt="Kayak Otelleri"><a href="">Kayak Otelleri</a></li>
+                        <li><img src="img/mobile/hatasonu.png" alt="Hafta Sonu Otelleri"><a href="">Hafta Sonu Otelleri</a></li>
+                        <li><img src="img/mobile/tema.png" alt="Otel Temaları"><a href="">Otel Temaları</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item flight">
+                    <a href="#"><img src="img/icons/uçak.png" alt="ucak">Uçuşlar</a>
+                </li>
+                <li class="menu-item tour">
+                    <a href="#"><img src="img/icons/tur.png" alt="tur">Turlar</a>
+                </li>
+                <li class="menu-item discount">
+                    <a href="#"><img src="img/icons/kampaniyalar.png" alt="kampanyalar">Kampanyalar</a>
+                </li>
             </ul>
             <h2 class="burger_menu__subtitle">YARDIM</h2>
             <ul class="burger_menu__support">
-                <li><img src="img/icons/iletisim.png" alt="müşteri ilişkileri"><span class="burger_menu__text">Müşteri İlişkileri</span><a class="burger_menu__phone" href="+908503333333">0 850 333 3 333</a></li>
+                <li>
+                    <img src="img/icons/iletisim.png" alt="müşteri ilişkileri">
+                    <span class="burger_menu__text">Müşteri İlişkileri</span>
+                    <a class="burger_menu__phone" href="+908503333333">0 850 333 3 333</a>
+                </li>
                 <li><img src="img/icons/canli.png" alt="canlı yardım">Canlı Yardım</li>
                 <li><img src="img/icons/faq.png" alt="sıkça sorulan sorular">Sıkça Sorulan Sorular</li>
                 <li class="burger_menu__app"><img src="img/icons/uygulama.png" alt="uyulamayı indirin">Uyulamayı İndirin</li>
@@ -43,14 +64,30 @@
 
         <picture class="sm-logo">
             <source media="(min-width:767px)" srcset="img/bg-logo.png">
-            <img src="img/sm-logo.png" alt="tatilburda.com">
+            <img src="img/mobile/sm-logo.png" alt="tatilburda.com">
         </picture>
-        <button class="user"><img src="img/icons/user.png" alt=""></button>
-        <div class="phone">
-            <span><img src="img/icons/headphones.png" alt="iletisim numarasi"></span>
-            <a href="tel:+908503333333" class="phone_number">0 850 333 33 33</a>
+
+
+        <ul class="main-navigation__menu">
+            <li>
+                <a href="#">Otel<img src="img/icons/arrowDown.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#">Tur<img src="img/icons/arrowDown.png" alt="tur"></a>
+            </li>
+            <li>
+                <a href="#">Kampanyalar<img src="img/icons/arrowDown.png" alt="kampanyalar"></a>
+            </li>
+        </ul>
+
+        <div class="contact_btn">
+            <div class="phone">
+                <span><img src="img/icons/headphones.png" alt="iletisim numarasi"></span>
+                <a href="tel:+908503333333" class="phone_number">0 850 333 33 33</a>
+            </div>
+            <button class="login" type="button">Giriş yap</button>
         </div>
-        <button class="login" type="button">Giriş yap</button>
+
     </div>
     <div class="sub_container">
         <div class="hero">

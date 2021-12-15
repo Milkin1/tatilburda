@@ -161,7 +161,6 @@ body.lock {
 }
 
 .main-navigation {
-
     z-index: 2;
     position: fixed;
     max-width: 100%;
@@ -181,6 +180,10 @@ body.lock {
         opacity: 1;
         padding: 0px 0px 0px 0px;
     }
+}
+
+.main-navigation.hide {
+    display: none;
 }
 
 .main-navigation.active {
@@ -205,7 +208,34 @@ body.lock {
 
 .hotel {
     border-top: 1px solid #e7e9ec;
+    display: flex;
+    flex-direction: column;
+
+    // .hotel__contact
+    &__contact {
+        display: none;
+        align-self: center;
+        position: relative;
+        top: 20px;
+        background-color: #f5f6f8;
+        width: 315px;
+
+        .first {
+            padding: 20px 0px 0px 0px;
+        }
+
+        img {
+            border-radius: 50%;
+            margin: 0px 15px 15px 0px;
+            padding: 0px 0px 0px 20px;
+        }
+    }
+
+    .hotel__contact.active {
+        display: block;
+    }
 }
+
 
 .flight {
     border-top: 1px solid #e7e9ec;
@@ -233,8 +263,60 @@ body.lock {
 .menu-item {
     padding: 17px 0px;
 
-    img {
+    >a img {
         padding: 0px 10px 0px 0px;
+    }
+
+    a {
+        margin: 0px 0px 0px 10px;
+    }
+
+    &:nth-child(1) a {
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/arrowDown.png) no-repeat;
+            left: 92%;
+            top: 176px;
+            width: 10px;
+            height: 6px;
+        }
+    }
+
+    &:nth-child(2) a {
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/arrow.png) no-repeat;
+            left: 92%;
+            top: 227px;
+            width: 13px;
+            height: 10px;
+        }
+    }
+
+    &:nth-child(3) a {
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/arrowDown.png) no-repeat;
+            left: 92%;
+            top: 277px;
+            width: 10px;
+            height: 6px;
+        }
+    }
+
+    &:nth-child(4) a {
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/arrow.png) no-repeat;
+            left: 92%;
+            top: 327px;
+            width: 13px;
+            height: 10px;
+        }
     }
 
     @media (min-width: 1023px) {
@@ -285,6 +367,7 @@ body.lock {
                 padding: 0px 10px 0px 0px;
             }
         }
+
     }
 
     // .burger_menu__app
@@ -304,8 +387,28 @@ body.lock {
         color: #3f536c;
         font-size: 14px;
     }
+
+    // .burger_menu__contact
 }
 
+.main-navigation__menu {
+    display: none;
+
+    @media (min-width: 1023px) {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+
+        li {
+            margin: 0px 40px 0px 0px;
+
+            img {
+                padding: 5px 0px 0px 10px;
+            }
+        }
+    }
+
+}
 
 .navigation {
     position: relative;
@@ -366,6 +469,10 @@ body.lock {
     z-index: 3;
     position: relative;
     order: 1;
+}
+
+.contact_btn {
+    display: flex;
 }
 
 .phone {
